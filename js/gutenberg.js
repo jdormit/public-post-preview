@@ -10,7 +10,7 @@ import {
 import { PluginSidebar, PluginSidebarMoreMenuItem } from '@wordpress/edit-post';
 import { registerPlugin } from '@wordpress/plugins';
 import { PreviewUntil } from './components/preview-until';
-import { dateI18n, settings } from '@wordpress/date';
+import { dateI18n, getSettings } from '@wordpress/date';
 
 let previewStatus = true;
 let previewUntil  = new Date();
@@ -52,7 +52,7 @@ const Component = () => (
 										onClick={ onToggle }
 										aria-expanded={ isOpen }
 									>
-										{ dateI18n( settings.formats.datetime, previewUntil ) }
+  									         { dateI18n( getSettings().formats.datetime, previewUntil ) }
 									</button>
 								) }
 								renderContent={ () => <PreviewUntil
