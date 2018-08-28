@@ -7,7 +7,7 @@ import {
 	FormToggle,
 	Dropdown
 } from '@wordpress/components';
-import { PluginSidebar, PluginMoreMenuItem } from '@wordpress/edit-post';
+import { PluginSidebar, PluginSidebarMoreMenuItem } from '@wordpress/edit-post';
 import { registerPlugin } from '@wordpress/plugins';
 import { PreviewUntil } from './components/preview-until';
 import { dateI18n, settings } from '@wordpress/date';
@@ -17,13 +17,13 @@ let previewUntil  = new Date();
 
 const Component = () => (
 	<Fragment>
-		<PluginMoreMenuItem
+		<PluginSidebarMoreMenuItem
 			name="public-post-preview"
 			type="sidebar"
 			target="public-post-preview"
 		>
 			{ __( 'Public Post Preview', 'public-post-preview' ) }
-		</PluginMoreMenuItem>
+		</PluginSidebarMoreMenuItem>
 		<PluginSidebar
 			name="public-post-preview"
 			title={ __( 'Public Post Preview', 'public-post-preview' ) }
