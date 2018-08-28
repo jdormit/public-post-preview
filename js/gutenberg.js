@@ -7,7 +7,7 @@ import {
 	FormToggle,
 	Dropdown
 } from '@wordpress/components';
-import { __experimental as editPost } from '@wordpress/edit-post';
+import { editPost } from '@wordpress/edit-post';
 import { registerPlugin } from '@wordpress/plugins';
 import { PreviewUntil } from './components/preview-until';
 import { dateI18n, settings } from '@wordpress/date';
