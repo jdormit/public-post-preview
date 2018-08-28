@@ -7,13 +7,10 @@ import {
 	FormToggle,
 	Dropdown
 } from '@wordpress/components';
-import { editPost } from '@wordpress/edit-post';
+import { PluginSidebar, PluginMoreMenuItem } from '@wordpress/edit-post';
 import { registerPlugin } from '@wordpress/plugins';
 import { PreviewUntil } from './components/preview-until';
 import { dateI18n, settings } from '@wordpress/date';
-
-// Destructure experimental components.
-const { PluginSidebar, PluginMoreMenuItem } = editPost;
 
 let previewStatus = true;
 let previewUntil  = new Date();
